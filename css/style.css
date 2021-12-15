@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@300&family=Mulish:wght@300&family=Open+Sans:ital,wght@0,300;1,400&display=swap');
+
+
+:root{
+    --primary: #f59d22;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Mulish', sans-serif;
+    background: #70e1f5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffd194, #70e1f5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+overflow-x: hidden;
+}
+
+
+/* Start Navbar */
+.navbar-brand{
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.right-containers{
+    display: flex;
+    align-items: center;
+}
+
+.nav-imgs{
+    width: 70px;
+    padding: 0 10px;
+}
+
+.fa-shopping-cart{
+    padding: 0 10px;
+    color: rgb(150, 148, 148);
+}
+
+.nav-hovers{
+    position: relative;
+    margin: 0 3px;
+    /* background: blue; */
+    
+    overflow: hidden;
+    transition: all 0.4s;
+}
+
+
+
+
+.nav-hovers::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background:var(--primary);
+
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+
+    transition: all 0.5s;
+}
+
+.nav-hovers:hover::after{
+    left: 0;
+}
+/* End Navbar */
+
+
+
+
+/* <!-- Start Left Section --> */
+.all-container{
+    width: 100%;
+}
+
+.big-container{
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+
+.big-img-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    background: var(--primary);
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.big-img-btn:focus{
+    outline: 0;
+}
+
+.big-img-btn.left{
+    left: 0;
+}
+
+.big-img-btn.right{
+    right: 0;
+}
+
+.big-container .big-img{
+    width: 100%;
+    border-radius: 10px;
+    display: none;
+}
+
+.big-container .big-img.active{
+    display: block;
+}
+
+
+
+img{
+    cursor: pointer;
+}
+
+.small-container{
+    width: 90%;
+    margin:30px auto;
+
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+img{
+    transition: all 0.5s;
+}
+
+.small-container .small-con {
+    width: 22%;
+    margin: 10px 0 !important;
+    border-radius: 12px;
+    transition: all 0.2s;
+    border: 2px solid #fff;
+}
+
+.small-container .small-con img{
+    width:100%;
+    border-radius: 10px;
+}
+
+
+.small-container .small-con.active {
+    opacity: 0.5;
+    border-color: var(--primary);
+}
+
+.small-container .small-con:hover {
+    border-color: var(--primary);
+}
+
+
+
+
+.first-second{
+    display: flex;
+    align-items: center;
+}
+
+.first{
+    margin-top: 6px;
+    font-weight: 900;
+}
+
+.second{
+    margin-left: 10px;
+    padding:5px 10px;
+    border-radius: 10px;
+    background: rgb(250, 177, 128);
+    font-weight: 900;
+    color: #fff;
+}
+
+
+.first-con{
+    display: flex;
+    align-items: center;
+    background: #f4f4f4;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.new-btns{
+    width: 35px;
+    height: 35px;
+    border: 0;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--primary);
+}
+
+.new-btns:focus{
+    outline: 0;
+}
+
+.s-second{
+    padding: 0 20px;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.button-con{
+    width: 100%;
+    display: flex;
+}
+
+.atc-btn,
+.atc-btn i{
+    border: 0;
+    padding: 5px 10px;
+    color: #fff;
+    font-weight: bolder;
+}
+
+
+.atc-btn{
+    background: var(--primary);
+    border-radius: 7px;
+    margin-left: 10px;
+}
+
+.atc-btn:focus{
+    outline: 0;
+}
+/* <!-- END Left Section --> */
+
+
+/* Preloader */
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 9999;
+}
+
+.preload{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* Start Footer */
+footer{
+background: #fff;
+
+text-align: center;
+color: #000;
+font-weight: bolder;
+margin-top: 30px;
+padding: 30px !important;
+position: relative;
+}
+
+.animate{
+    width: 100%;
+    height: 80px;
+
+    position: absolute;
+    top: -80px;
+    left: 0;
+
+    background-image: url(../img/wave.png);
+    background-size: 1000px 80px;
+    animation: animate_big 5s linear infinite;
+    z-index: 1000;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes animate_big {
+    0%{
+        background-position:0 0;
+    }
+
+    100%{
+        background-position: 1000px 0;
+    }
+}
+
+
+
+.animate-one{
+    /* background: blue; */
+    background-image: url(../img/wave.png);
+    background-size: 1000px 80px;
+    animation: animate_one 10s linear  infinite;
+
+    opacity: 0.8;
+    z-index: 900;
+}
+
+
+@keyframes animate_one {
+    0%{
+        background-position:0 0;
+    }
+
+    100%{
+        background-position: -1000px 0;
+    }
+}
+
+
+
+.animate-two{
+    /* background: blue; */
+    background-image: url(../img/wave.png);
+    background-size: 1000px 80px;
+    animation: animate_two 15s linear  infinite;
+
+    opacity: 0.8;
+    z-index: 800;
+}
+
+
+@keyframes animate_two {
+    0%{
+        background-position:0 0;
+    }
+
+    100%{
+        background-position: 1000px 0;
+    }
+}
+
+
+
+.animate-three{
+    /* background: blue; */
+    background-image: url(../img/wave.png);
+    background-size: 1000px 80px;
+    animation: animate_three 20s linear  infinite;
+
+    opacity: 0.7;
+    z-index: 700;
+}
+
+
+@keyframes animate_three {
+    0%{
+        background-position:0 0;
+    }
+
+    100%{
+        background-position: -1000px 0;
+    }
+}
+
+
+
+
+.animate-four{
+    /* background: blue; */
+    background-image: url(../img/wave.png);
+    background-size: 1000px 80px;
+    animation: animate_four 25s linear  infinite;
+
+    opacity: 0.5;
+    z-index: 600;
+}
+
+
+@keyframes animate_four {
+    0%{
+        background-position:0 0;
+    }
+
+    100%{
+        background-position: 1000px 0;
+    }
+}
+
+
+/* Start Modal */
+.modal-body-cons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.modal-texts p{
+    margin:0;
+    padding: 0;
+}
+
+
+.modal-middle-btn,
+.modal-bottom-btn{
+    border: 0;
+    background: transparent;
+}
+
+.modal-middle-btn{
+    color: tomato;
+}
+
+
+.modal-bottom-btn{
+    background: var(--primary);
+    padding: 10px 0;
+    border-radius: 5px;
+    color: #fff;
+}
